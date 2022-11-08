@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+ 
+    <input id="n1" type="number">
+    </br>
+    
+    <select id="s1">
+        <option value="0">Styczeń</option>
+        <option value="1">Luty</option>
+        <option value="2">Marzec</option>
+        <option value="3">Kwiecień</option>
+        <option value="4">Maj</option>
+        <option value="5">Czerwiec</option>
+        <option value="6">Lipiec</option>
+        <option value="7">Sierpień</option>
+        <option value="8">Wrzesień</option>
+        <option value="9">Październik</option>
+        <option value="10">Listopad ale wygryw</option>
+        <option value="11">Grudzień</option>
+    </select>
+
+    </br>
+    <button id="b1" onclick="kalendarz()">Dawaj!</button>
+
+    <div id="div1">
+        
+    </div>
+
+    </br>
+    <p id="p1" style="clear:both"></p>
+    
+    
+<script>
+
+    function kalendarz(){
+        kontener = document.getElementById("div1");
+        kontener.innerHTML ="";
+
+        miesiac = document.getElementById("s1").value;
+        rok = document.getElementById("n1").value;
+        
+        
+        // motherdolorosa=document.getElementById("tablica1");
+        
+        dnikalendarza=[31,28,31,30,31,30,31,31,30,31,30,31];
+        dni = dnikalendarza[miesiac];
+
+         for(i=1;i<=dni;i++){
+            sevendays=document.createElement("div");
+            sevendays.innerHTML = i;
+            sevendays.style.cssFloat ="left";
+            sevendays.style.border ="solid 2px black";
+            sevendays.style.height = 100+"px";
+            sevendays.style.width = 100+"px";
+            sevendays.style.textAlign = "center";
+            sevendays.style.backgroundColor = "lightgrey";
+            sevendays.setAttribute("id","d"+i);
+            sevendays.setAttribute("onclick", "licz()");
+            kontener.appendChild(sevendays);
+            if((i-1)%7==0){
+                sevendays.style.clear ="both";
+            }
+        
+         } 
+
+
+    }
+    
+
+    function licz(){
+        pole = document.getElementById("p1").innerHTML;
+
+        d=new Date();
+        day=d.getDay();
+        month=d.getMonth();
+
+        pole=+"cssfsfdsfds";
+
+    
+    }
+
+
+</script>
+
+
+</body>
+</html>

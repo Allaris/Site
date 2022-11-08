@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onchange="rysuj()">
+    R<input id="rang1" type="range" value="25" min="0" max="255">
+     <input id="n1" type="number"> </br>
+    G<input id="rang2" type="range" value="25" min="0" max="255"> 
+     <input id="n2" type="number"> </br>
+    B<input id="rang3" type="range" value="25" min="0" max="255">
+     <input id="n3" type="number"> </br>
+    S<input id="rang4" type="range" value="100" min="0" max="1000"> 
+     <input id="n4" type="number"> </br>
+    <!-- step=10 - skacze co 10 -->
+
+    <div id="d1">
+
+    </div>
+
+<script>
+        
+    function rysuj(){
+    
+        kolorR = document.getElementById("rang1").value;
+        kolorG = document.getElementById("rang2").value;
+        kolorB = document.getElementById("rang3").value;
+        rozmiar = document.getElementById("rang4").value;
+
+        kwadrat = document.getElementById("d1");
+
+        kwadrat.style.backgroundColor="rgb("+kolorR+","+kolorG+","+kolorB+")";
+        kwadrat.style.width = rozmiar+'px';
+        kwadrat.style.height = rozmiar+'px';
+    }
+    
+
+
+
+</script>
+
+
+</body>
+</html>
