@@ -1,0 +1,47 @@
+*{
+    font-family: 'Courier New';
+    padding: 0px;
+    margin: 0px;
+
+}
+
+#baner,#stopka{
+    background-color: #4083b9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 120%;
+
+}
+
+#stopka{
+    text-align: left;
+    clear:both;
+}
+
+#lewypanel{
+    background-color: #878787;
+    font-size: 120%;
+    width: 50%;
+    height: 900px;
+    float:left;
+
+}
+
+#prawypanel{
+    background-color: #428787;
+    text-align: center;
+    width: 50%;
+    height: 900px;
+    float:left;
+
+}
+
+form{
+    margin: 20px;
+
+}
+
+#p2{
+    font-size: 120%;
+}
